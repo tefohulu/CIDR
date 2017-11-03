@@ -18,18 +18,27 @@ untuk menjalankan program
 ### Phase 1
 
 * Kalkulator diminta untuk mencari sebuah subnet valid untuk host yang disediakan.
-* Yang dilakukan program adalah dengan membuat subnet yang diturunkan dari host yang telah diberikan, dalam hal ini penulis menggunakan akhiran ``` XXX.XXX.XXX.0/24 ```. Misalnya IP addres yang diberikan adalah
-``` 
-53.71.139.80
-```
-Maka subnetnya adalah
-```
-53.71.139.0/24
-```
+* Yang dilakukan program adalah dengan membuat subnet yang diturunkan dari host yang telah diberikan, dalam hal ini penulis menggunakan akhiran ``` XXX.XXX.XXX.0/24 ```. 
+* Misalnya host yang diberikan adalah
+  ``` 
+  53.71.139.80
+  ```
+  Maka subnetnya adalah
+  ```
+  53.71.139.0/24
+  ```
 
 ### Phase 2
 
 * Kalkulator diminta untuk menghitung jumlah host valid untuk sebuah subnet yang disediakan (termasuk broadcast dan gateway).
+* Yang dilakukan program adalah membaca subnet sampai dengan karakter setelah "/", untuk kemudian dihitung jumlah hostnya (x), dengan rumus
+2 <sup> 32-x </sup>
+* Misalnya subnet yang diberikan adlaah
+  ```
+  230.131.111.51/22
+  ```
+  Maka jumlah host validnya adalah
+  2 <sup> 32-22 </sup> = 2 <sup> 10 </sup> = 1024
 
 ### Phase 3
 
