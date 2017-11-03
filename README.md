@@ -19,27 +19,14 @@ untuk menjalankan program
 
 * Kalkulator diminta untuk mencari sebuah subnet valid untuk host yang disediakan.
 * Yang dilakukan program adalah dengan membuat subnet yang diturunkan dari host yang telah diberikan, dalam hal ini penulis menggunakan akhiran ``` XXX.XXX.XXX.0/24 ```. 
-* Misalnya host yang diberikan adalah
-  ``` 
-  53.71.139.80
-  ```
-  Maka subnetnya adalah
-  ```
-  53.71.139.0/24
-  ```
 
 ### Phase 2
 
 * Kalkulator diminta untuk menghitung jumlah host valid untuk sebuah subnet yang disediakan (termasuk broadcast dan gateway).
 * Yang dilakukan program adalah membaca subnet sampai dengan karakter setelah "/", untuk kemudian dihitung jumlah hostnya (x), dengan rumus
 2 <sup> 32-x </sup>
-* Misalnya subnet yang diberikan adlaah
-  ```
-  230.131.111.51/22
-  ```
-  Maka jumlah host validnya adalah
-  2 <sup> 32-22 </sup> = 2 <sup> 10 </sup> = 1024
 
 ### Phase 3
 
 * Kalkulator diminta untuk mengecek apakah suatu host berada pada subnet yang diberikan, dan akan memberikan T bila benar dan F bila salah.
+* Yang dilakukan program adalah melakukan masking untuk subnet dan host. Kemudian, dilakukan operasi XOR. Apabila nilainya 0, maka 'T', dan apabila salah akan bernilai 'F'.
